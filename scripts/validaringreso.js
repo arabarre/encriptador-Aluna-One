@@ -1,6 +1,6 @@
 function validarTecla(evento) {
 	// valida el codigo de la tecla por codigo ASCIIda.
-	var codigoTecla = evento.which || event.keyCode;
+	var codigoTecla = evento.which || evento.keyCode;
 
 	if (
 		(codigoTecla >= 97 && codigoTecla <= 122) ||
