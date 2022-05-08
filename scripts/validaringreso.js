@@ -1,19 +1,10 @@
 function validarTecla(evento) {
 	// valida el codigo de la tecla por codigo ASCIIda.
-	var codigoTecla = evento.which || evento.keyCode;
-
-	if (
-		(codigoTecla >= 97 && codigoTecla <= 122) ||
-		codigoTecla == 8 ||
-		codigoTecla == 33 ||
-		codigoTecla == 32 ||
-		codigoTecla == 241 ||
-		codigoTecla == 44 ||
-		codigoTecla == 46 ||
-		codigoTecla == 59
-	) {
+	var codigoTecla = evento.key;
+	caracteresAdmitidos = 'abcdefghijklmnñopqrstuvwxyz ,."!;';
+	if (caracteresAdmitidos.includes(evento.key)) {
 		// Retorna true para las letras desde a-z
-		// teclas retroceso para borrar, !, espacio, ñ, (,), (.) y (;)
+		// teclas retroceso para borrar, (!) , espacio, ñ, (,), (.) y (;)
 		return true;
 	} else {
 		// Retorna falso para todas los demas caracteres

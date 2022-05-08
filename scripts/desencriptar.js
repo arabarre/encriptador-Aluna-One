@@ -6,6 +6,18 @@ botonDesencriptar.addEventListener('click', function (event) {
 	const letrasRemplazar = ['a', 'e', 'i', 'o', 'u'];
 	const letrasReemplazo = ['ai', 'enter', 'imes', 'ober', 'ufat'];
 
+	if (vigilante) {
+		var munecoO = (document.querySelector('.muneco').style.display = 'none');
+		var visible = document.querySelector('.invisible');
+		visible.classList.remove('invisible');
+		var visible = document.querySelector('.invisibleB');
+		visible.classList.remove('invisibleB');
+		vigilante = false;
+		var mensajeE = document.querySelector('.principal-deFI');
+		mensajeE.classList.remove('principal-deFI');
+		mensajeE.classList.add('principal-deFII');
+	}
+
 	//decodificar
 	var mensajeDecodificado = form.mensajeO.value;
 	// reemplaza los codigo por las vocales respectivas
